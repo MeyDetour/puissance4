@@ -1,5 +1,61 @@
 let play = document.querySelector('[data-label="play-game"]');
 let settings = document.querySelector('[data-label="settings"]');
+let allow_sound = document.getElementById('checkboxInput-sound')
+let bouton_setting_retour = document.querySelector('.BtnREtour')
+let boutonRetour = document.querySelector('.BtnREtour')
+let toggleMode = document.querySelector('.switch-nightMode')
+
+allow_sound.addEventListener('click',()=>{
+    allow_sound.classList.toggle('sound')
+})
+
+//joue le son clic
+function playsound(){
+    if(allow_sound.classList.contains('sound')){
+        new Audio('audio/clic.mp3').play()
+    }
+}
+
+//ferme et ouvre le menu
+function toggleMenu(){
+    play.classList.toggle('d-none')
+    settings.classList.toggle('d-none')
+    bouton_setting_retour.classList.toggle('d-none')
+    document.querySelector('.parametre-container').classList.toggle('d-none')
+}
+
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    toggleMode.addEventListener('mouseover', () => {
+        playsound();
+        let fond = document.getElementById('circlesContainer');
+        fond.classList.toggle('containerDark');
+        fond.classList.toggle('containerLight');
+    });
+});
+
+
+play.addEventListener('click',()=>{
+   playsound()
+    window.location.replace('jeu.html')
+})
+
+
+settings.addEventListener('click',()=>{
+   playsound()
+    toggleMenu()
+    })
+boutonRetour.addEventListener('click',()=>{
+    toggleMenu()
+})
+
+
+
+
+
+
+
 
 
 //ANIMATION FOND
