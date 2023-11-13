@@ -11,18 +11,29 @@
     <link rel="website icon" type="png" href="image/iconeMorpion.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="jeu.css">
-
+    <style id="dynamicStyles"></style>
     <title>MORPION GANE</title>
 </head>
 <body>
 <div class="containerfond containerLight centered ">
-    <div class="container d-flex flex-row  brd-timide  br-20 h-95  ">
+    <div class="containerPage container bg-grincheux d-flex flex-row p-4   br-20 h-95  ">
 
-        <div class="w-70 centered">
-            <span class="chrono tx-dash fs-3"></span>
+        <div class="container-jeu d-flex flex-column w-70 centered">
+            <span id="time" class="sp chrono tx-dash fs-3"></span>
+            <div class="containerGrid">
+            </div>
+        </div>
+        <div class="container-score bg-atchoum p-3 w-30 br-30  ">
+
+            <form name="parametre" action="" method="">
+                <div class=" w-100 d-flex flex-row flew-nowrap">
+                <input type="button" name="lance"  value="Start" onclick="chrono();debut();">
+                <input type="button" name="pause"  value="Stop" onclick="arret();" disabled="disabled">
+                <input type="button" name="zero"  value="Clear" onclick="arret();raz();" disabled="disabled">
+        </div>
+                </form>
 
         </div>
-        <div class="bg-grincheux w-30 br-30 brd-timide "></div>
 
     </div>
 
