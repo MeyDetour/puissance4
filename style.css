@@ -1,0 +1,134 @@
+
+:root {
+    --falseColor: red;
+    --prof: #3f2f59;
+    --dash: #141717;
+    --grincheux: white;
+    --goodColor: green;
+    --violet1: #6a0be5;
+    --c-script: #22034b;
+    --joyeux: #7f05ff;
+    --simplet: #3a1f57; /* Violet plus clair */
+    --timide: #444654; /* Noir-Gris foncé */
+    --dormeur: grey; /* Noir-Gris clair */
+    --atchoum: #b7b7b7; /* Blanc */
+
+}
+
+body {
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.containerfond {
+    width: 100vw;
+    height: 100vh;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+}
+
+.boutonContainer {
+    gap: 20px;
+
+
+}
+
+.rainbow-hover {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #2B3044;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 163px;
+    position: relative;
+    line-height: 76px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+    0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+}
+
+.rainbow-hover:hover {
+    background: linear-gradient(
+            90deg,
+            #866ee7,
+            #ea60da,
+            #ed8f57,
+            #fbd41d,
+            #2cca91
+    );
+
+}
+
+.rainbow-hover:hover .sp {
+    background: linear-gradient(90deg, #2B3044, #2B3044); /* Couleur grise de fond */
+    -webkit-background-clip: text;
+    transition: 0.3s;
+    transform: scale(1.3);
+
+}
+
+.sp {
+    background: linear-gradient(
+            90deg,
+            #866ee7,
+            #ea60da,
+            #ed8f57,
+            #fbd41d,
+            #2cca91
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block;
+}
+
+.rainbow-hover:active {
+    transition: 0.3s;
+    transform: scale(0.93);
+}
+
+
+/*  ROND ANIMATION FOND */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.circles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 110px; /* Taille fixe */
+    height: 110px; /* Taille fixe */
+    transition: transform 1s linear; /* Transition de 2 secondes pour le mouvement fluide */
+    z-index: -1;
+    background: linear-gradient(
+            90deg,
+            #866ee7,
+            #ea60da,
+            #ed8f57,
+            #fbd41d,
+            #2cca91
+    );
+    filter: drop-shadow(2px 4px 6px grey);
+    box-shadow: inset 0px 0px 2em white;
+}
